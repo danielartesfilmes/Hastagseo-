@@ -1,0 +1,1134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gerador Automático de Descrições, Palavras-chave e Hashtags para SEO e Redes Sociais. Aprenda SEO e melhore seu posicionamento online com nossas ferramentas profissionais e artigos especializados.">
+    <meta name="keywords" content="SEO, marketing digital, gerador de descrição, palavras-chave, hashtags, otimização de conteúdo, dicas SEO, tutorial SEO">
+    <meta name="author" content="Sangueve Junior">
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <meta property="og:title" content="Gerador de SEO Profissional | Artigos e Ferramentas de Marketing Digital">
+    <meta property="og:description" content="Crie conteúdo otimizado para SEO e aprenda estratégias avançadas com nossos tutoriais e geradores automáticos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sangueveseo.com">
+    <meta property="og:image" content="https://sangueveseo.com/images/seo-generator-preview.jpg">
+    
+    <title>Gerador de SEO Profissional | Artigos e Ferramentas de Marketing Digital</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #4cc9f0;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --success-color: #4bb543;
+            --warning-color: #f0ad4e;
+            --danger-color: #d9534f;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f5f7fa;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 0.5rem;
+            color: var(--accent-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: -4px;
+            left: 0;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        /* Main Content */
+        main {
+            padding-top: 80px;
+            min-height: calc(100vh - 120px);
+            padding-bottom: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #4361ee 0%, #4cc9f0 100%);
+            color: white;
+            margin-bottom: 2rem;
+            border-radius: var(--border-radius);
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        
+        /* Generator Section */
+        .generator-container {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .input-group input:focus,
+        .input-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .btn i {
+            margin-right: 0.5rem;
+        }
+        
+        .output-section {
+            margin-top: 2rem;
+        }
+        
+        .output-card {
+            background-color: #f8f9fa;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .output-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .output-card h3 i {
+            margin-right: 0.5rem;
+        }
+        
+        .output-content {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: white;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            border: 1px solid #eee;
+        }
+        
+        .copy-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 1rem;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .copy-btn:hover {
+            background-color: #3aa8d1;
+        }
+        
+        .copy-btn i {
+            margin-right: 0.3rem;
+        }
+        
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        /* Blog/Articles Section */
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .article-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .article-image {
+            height: 200px;
+            background-color: #eee;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .article-content {
+            padding: 1.5rem;
+        }
+        
+        .article-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .article-content p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #888;
+            font-size: 0.8rem;
+        }
+        
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+        
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        
+        /* Article Tags */
+        .article-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .article-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .article-comments {
+            color: #666;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .article-comments i {
+            margin-right: 5px;
+        }
+        
+        /* Policy Sections */
+        .policy-section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .policy-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .policy-section h3 {
+            margin: 1.5rem 0 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .policy-section p {
+            margin-bottom: 1rem;
+        }
+        
+        .policy-section ul {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .footer-column h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                transition: var(--transition);
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        /* Toast Notification */
+        .toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 4px;
+            padding: 12px;
+            position: fixed;
+            z-index: 1000;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .toast.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .guide-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .guide-step {
+            margin-bottom: 2rem;
+        }
+
+        .guide-step h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .guide-step h3 i {
+            margin-right: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .about-content {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 2rem;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            background-color: #eee;
+            border-radius: var(--border-radius);
+            background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
+            background-size: cover;
+            background-position: center;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                padding-right: 0;
+            }
+            
+            .about-image {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Texto copiado com sucesso!</div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <i class="fas fa-search"></i>
+                SEO Generator
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#generator"><i class="fas fa-magic"></i> Gerador</a></li>
+                <li><a href="#articles"><i class="fas fa-newspaper"></i> Artigos</a></li>
+                <li><a href="#guide"><i class="fas fa-book"></i> Guia</a></li>
+                <li><a href="#privacy"><i class="fas fa-shield-alt"></i> Privacidade</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contato</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="fade-in">Domine o SEO com Nossas Ferramentas e Artigos</h1>
+                <p class="fade-in">Aprenda estratégias avançadas de otimização e utilize nosso gerador automático para criar conteúdo perfeito para motores de busca e redes sociais.</p>
+            </div>
+        </section>
+
+        <!-- Generator Section -->
+        <section id="generator" class="container fade-in">
+            <div class="generator-container">
+                <h2><i class="fas fa-magic"></i> Gerador de Conteúdo SEO</h2>
+                <p>Crie descrições, palavras-chave e hashtags otimizadas em segundos com nossa ferramenta profissional.</p>
+                
+                <div class="input-group">
+                    <label for="titulo">Título do Conteúdo:</label>
+                    <input type="text" id="titulo" placeholder="Ex: Marketing Digital para Iniciantes" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="keywords">Palavras-chave Adicionais (opcional):</label>
+                    <input type="text" id="keywords" placeholder="Ex: dicas, tutorial, passo a passo">
+                </div>
+                
+                <button id="generate-btn" class="btn">
+                    <i class="fas fa-bolt"></i> Gerar Conteúdo SEO
+                </button>
+                
+                <div class="output-section">
+                    <div class="output-card">
+                        <h3><i class="fas fa-align-left"></i> Descrição SEO</h3>
+                        <div class="output-content" id="descricao">
+                            Sua descrição otimizada para SEO aparecerá aqui...
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('descricao')">
+                            <i class="far fa-copy"></i> Copiar
+                        </button>
+                    </div>
+                    
+                    <div class="output-card">
+                        <h3><i class="fas fa-key"></i> Palavras-chave</h3>
+                        <div class="output-content" id="palavras">
+                            Suas palavras-chave estratégicas aparecerão aqui...
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('palavras')">
+                            <i class="far fa-copy"></i> Copiar
+                        </button>
+                    </div>
+                    
+                    <div class="output-card">
+                        <h3><i class="fas fa-hashtag"></i> Hashtags</h3>
+                        <div class="output-content" id="hashtags">
+                            Suas hashtags otimizadas aparecerão aqui...
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('hashtags')">
+                            <i class="far fa-copy"></i> Copiar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="container fade-in">
+            <div class="guide-section">
+                <h2><i class="fas fa-book"></i> Guia Completo de SEO</h2>
+                
+                <div class="guide-step">
+                    <h3><i class="fas fa-search"></i> O Que é SEO?</h3>
+                    <p>SEO (Search Engine Optimization) é o conjunto de técnicas para melhorar o posicionamento de um site nos resultados orgânicos dos motores de busca como Google. Um bom SEO aumenta a visibilidade do seu conteúdo, atraindo mais tráfego qualificado.</p>
+                </div>
+                
+                <div class="guide-step">
+                    <h3><i class="fas fa-lightbulb"></i> Por Que SEO é Importante?</h3>
+                    <p>93% das experiências online começam com uma busca. Sites bem posicionados recebem mais visitantes, aumentam sua autoridade e convertem mais. SEO é essencial para qualquer estratégia digital sustentável.</p>
+                </div>
+                
+                <div class="guide-step">
+                    <h3><i class="fas fa-cogs"></i> Como Funciona Nosso Gerador</h3>
+                    <p>Nosso algoritmo analisa seu título e palavras-chave para criar combinações otimizadas baseadas em:</p>
+                    <ul>
+                        <li>Densidade ideal de palavras-chave</li>
+                        <li>Padrões de engajamento em redes sociais</li>
+                        <li>Melhores práticas de copywriting</li>
+                        <li>Análise de conteúdo top ranking</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section id="articles" class="container fade-in">
+            <h2 style="text-align: center; margin-bottom: 2rem;"><i class="fas fa-newspaper"></i> Artigos e Tutoriais</h2>
+            
+            <div class="articles">
+                <!-- Artigo 1 -->
+                <article class="article-card">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80')">
+                        <div class="article-tag" style="background-color: #4cc9f0;">Básico</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>SEO para Iniciantes: Guia Completo 2025</h3>
+                        <p>Aprenda os fundamentos do SEO desde o zero. Este guia cobre desde pesquisa de palavras-chave até técnicas avançadas de link building.</p>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 15/03/2025</span>
+                            <span><i class="far fa-clock"></i> 8 min</span>
+                        </div>
+                        <div class="article-footer">
+                            <a href="https://www.seo.com/pt/basics/on-page-seo/" target="_blank" class="read-more">Ler artigo completo <i class="fas fa-arrow-right"></i></a>
+                            <span class="article-comments"><i class="far fa-comment"></i> 12</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Artigo 2 -->
+                <article class="article-card">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80')">
+                        <div class="article-tag" style="background-color: #3f37c9;">Avançado</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Pesquisa de Palavras-Chave: Estratégias 2025</h3>
+                        <p>Descubra como encontrar as melhores palavras-chave para seu nicho usando ferramentas gratuitas e técnicas profissionais.</p>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 10/03/2025</span>
+                            <span><i class="far fa-clock"></i> 12 min</span>
+                        </div>
+                        <div class="article-footer">
+                            <a href="https://www.seo.com/pt/basics/on-page-seo/keyword-research/" target="_blank" class="read-more">Ler artigo completo <i class="fas fa-arrow-right"></i></a>
+                            <span class="article-comments"><i class="far fa-comment"></i> 8</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Artigo 3 -->
+                <article class="article-card">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1611162616475-464a0b56f6a6?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80')">
+                        <div class="article-tag" style="background-color: #4361ee;">Redes Sociais</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Hashtags que Viralizam em 2025</h3>
+                        <p>Lista atualizada das melhores práticas para usar hashtags e aumentar seu alcance orgânico no Instagram, Twitter e TikTok.</p>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 05/03/2025</span>
+                            <span><i class="far fa-clock"></i> 6 min</span>
+                        </div>
+                        <div class="article-footer">
+                            <a href="https://rapidtags.io/" target="_blank" class="read-more">Ler artigo completo <i class="fas fa-arrow-right"></i></a>
+                            <span class="article-comments"><i class="far fa-comment"></i> 15</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Botão para mais artigos -->
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#todos-artigos" class="btn" style="width: auto; display: inline-flex; align-items: center;">
+                    <i class="fas fa-book-open"></i> Ver Todos os Artigos
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="container fade-in">
+            <div class="about-section">
+                <div class="about-content">
+                    <h2><i class="fas fa-user-tie"></i> Sobre Nós</h2>
+                    <p>O SEO Generator foi criado por Sangueve Junior, especialista em marketing digital com mais de 5 anos de experiência em otimização de conteúdo.</p>
+                    <p>Nosso objetivo é democratizar o acesso a ferramentas profissionais de SEO, ajudando pequenos empresários, criadores de conteúdo e marketers a competir em igualdade com grandes players.</p>
+                    <p>Todas as nossas ferramentas são baseadas em pesquisas de mercado e análise de dados reais de algoritmos de busca.</p>
+                </div>
+                <div class="about-image"></div>
+            </div>
+        </section>
+
+        <!-- Privacy Policy Section -->
+        <section id="privacy" class="container fade-in">
+            <div class="policy-section">
+                <h2><i class="fas fa-shield-alt"></i> Política de Privacidade</h2>
+                <p>Última atualização: 25 de Março de 2025</p>
+                
+                <h3>1. Informações que Coletamos</h3>
+                <p>Nosso gerador de SEO foi desenvolvido para respeitar sua privacidade. Não armazenamos nenhum conteúdo que você insere ou gera em nosso sistema. Todo o processamento é feito localmente no seu navegador.</p>
+                
+                <h3>2. Uso de Cookies</h3>
+                <p>Utilizamos cookies essenciais para o funcionamento básico do site e cookies de desempenho para melhorar nossa ferramenta. Não utilizamos cookies de rastreamento ou para fins publicitários sem seu consentimento explícito.</p>
+                
+                <h3>3. Compartilhamento de Dados</h3>
+                <p>Não compartilhamos, vendemos ou alugamos qualquer informação pessoal para terceiros. Seu conteúdo permanece privado e confidencial.</p>
+                
+                <h3>4. Segurança</h3>
+                <p>Implementamos medidas de segurança avançadas para proteger suas informações. Como todo o processamento ocorre no seu dispositivo, seus dados nunca são transmitidos para nossos servidores sem sua autorização.</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2><i class="fas fa-cookie-bite"></i> Política de Cookies</h2>
+                <p>Nosso site utiliza diferentes tipos de cookies:</p>
+                <ul>
+                    <li><strong>Essenciais:</strong> Necessários para o funcionamento básico do gerador</li>
+                    <li><strong>Desempenho:</strong> Para analisar uso e melhorar nossas ferramentas</li>
+                    <li><strong>Funcionalidade:</strong> Para lembrar suas preferências</li>
+                </ul>
+                <p>Você pode gerenciar suas preferências de cookies a qualquer momento nas configurações do seu navegador.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container fade-in">
+            <div class="policy-section">
+                <h2><i class="fas fa-envelope"></i> Contato</h2>
+                <p>Tem dúvidas, sugestões ou precisa de suporte? Entre em contato conosco através dos canais abaixo:</p>
+                
+                <div style="margin-top: 1.5rem;">
+                    <p><strong><i class="fas fa-envelope"></i> Email:</strong> sanguevejunior5@gmail.com</p>
+                    <p><strong><i class="fas fa-phone"></i> WhatsApp:</strong> <a href="https://wa.me/244928006866" style="color: var(--primary-color); text-decoration: none;">+244 928 006 866</a></p>
+                    <p><strong><i class="fas fa-map-marker-alt"></i> Localização:</strong> Luanda, Angola</p>
+                </div>
+                
+                <div style="margin-top: 2rem;">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>SEO Generator</h3>
+                <p>Ferramentas profissionais para otimização de conteúdo e redes sociais. Totalmente gratuito e fácil de usar.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#generator"><i class="fas fa-chevron-right"></i> Gerador SEO</a></li>
+                    <li><a href="#articles"><i class="fas fa-chevron-right"></i> Artigos</a></li>
+                    <li><a href="#guide"><i class="fas fa-chevron-right"></i> Guia SEO</a></li>
+                    <li><a href="#privacy"><i class="fas fa-chevron-right"></i> Privacidade</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#privacy"><i class="fas fa-chevron-right"></i> Termos de Serviço</a></li>
+                    <li><a href="#privacy"><i class="fas fa-chevron-right"></i> Política de Cookies</a></li>
+                    <li><a href="#privacy"><i class="fas fa-chevron-right"></i> Política de Privacidade</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2025 SEO Generator by Sangueve Junior. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // SEO Generator Function
+        document.getElementById('generate-btn').addEventListener('click', gerarSEO);
+        
+        function gerarSEO() {
+            let titulo = document.getElementById('titulo').value.trim();
+            let keywords = document.getElementById('keywords').value.trim();
+            
+            if (!titulo) {
+                alert('Por favor, insira um título para gerar o conteúdo SEO.');
+                return;
+            }
+            
+            // Generate SEO Description
+            let descricao = `🚀 Descubra tudo sobre "${titulo}"! Aprenda técnicas, segredos e estratégias profissionais para melhorar seu conteúdo. `;
+            descricao += `Neste guia completo, você vai encontrar: dicas práticas, melhores práticas e como aplicar no seu dia a dia. `;
+            descricao += `Aproveite ao máximo ${titulo} e potencialize seus resultados! ✅`;
+            
+            if (keywords) {
+                descricao += ` ${keywords}.`;
+            }
+            
+            // Limit to 400 characters
+            descricao = descricao.substring(0, 400);
+            
+            // Generate Keywords
+            let palavras = [
+                titulo.toLowerCase(),
+                `como usar ${titulo.toLowerCase()}`,
+                `melhores práticas ${titulo.toLowerCase()}`,
+                `guia completo ${titulo.toLowerCase()}`,
+                `dicas para ${titulo.toLowerCase()}`,
+                `tutorial ${titulo.toLowerCase()}`,
+                `aprender ${titulo.toLowerCase()}`
+            ];
+            
+            if (keywords) {
+                keywords.split(',').forEach(keyword => {
+                    palavra = keyword.trim().toLowerCase();
+                    if (palavra) palavras.push(palavra);
+                });
+            }
+            
+            // Remove duplicates and join
+            palavras = [...new Set(palavras)].join(', ');
+            
+            // Generate Hashtags
+            let hashtagsBase = [
+                '#SEO',
+                '#MarketingDigital',
+                '#Conteúdo',
+                '#Dicas',
+                '#Aprender',
+                '#Tutorial'
+            ];
+            
+            let tituloHashtag = titulo.replace(/\s+/g, '');
+            hashtagsBase.unshift(`#${tituloHashtag}`);
+            
+            if (keywords) {
+                keywords.split(',').forEach(keyword => {
+                    palavra = keyword.trim().replace(/\s+/g, '');
+                    if (palavra) hashtagsBase.push(`#${palavra}`);
+                });
+            }
+            
+            let hashtags = hashtagsBase.join(' ');
+            
+            // Display results
+            document.getElementById('descricao').textContent = descricao;
+            document.getElementById('palavras').textContent = palavras;
+            document.getElementById('hashtags').textContent = hashtags;
+            
+            // Scroll to results
+            document.querySelector('.output-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        // Copy to Clipboard Function
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const text = element.textContent || element.innerText;
+            
+            // Create a temporary textarea to copy from
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';  // Prevent scrolling to bottom
+            document.body.appendChild(textarea);
+            textarea.select();
+            
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showToast('Texto copiado com sucesso!');
+                } else {
+                    showToast('Não foi possível copiar o texto. Tente novamente.');
+                }
+            } catch (err) {
+                console.error('Falha ao copiar: ', err);
+                showToast('Erro ao copiar o texto. Seu navegador pode não suportar esta função.');
+            }
+            
+            document.body.removeChild(textarea);
+        }
+
+        // Show toast notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+        
+        // Animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        fadeElements.forEach(element => {
+            element.style.opacity = 0;
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(element);
+        });
+
+        // Google Analytics
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+
+</body></html>
